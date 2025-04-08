@@ -77,7 +77,7 @@
                                         </div>
                                     @endif
 
-                                    @error('featuredImage')
+                                    @error('profile_image')
                                         <p class="text-danger">{{ $message }} </p>
                                     @enderror
                                 </div>

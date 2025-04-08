@@ -7,6 +7,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class CreateUser extends Component
 {
@@ -37,6 +38,7 @@ class CreateUser extends Component
             }
 
             $imagepath = $this->profile_image->store('', 'public');
+
         } else {
             $imagepath = $this->userId ? $this->user->profile_image : null;
         }
