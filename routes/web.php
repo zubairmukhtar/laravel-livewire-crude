@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\CreateUser;
+use App\Livewire\UserList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',UserList::class)->name('users');
+Route::get('user/add',CreateUser::class)->name('create.user');
+Route::post('user/store',CreateUser::class)->name('user.store');
+Route::get('user/{user}/edit', CreateUser::class)->name('user.edit');
