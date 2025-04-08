@@ -39,18 +39,18 @@
                             @enderror
                         </div>
                         <div class="form-group mb-2">
-                            <label for="title">Password <span class="text-danger">*</span></label>
+                            <label for="title">Password <span class="text-danger">{{$user ? '' : '*' }}</span></label>
                             <input type="text" wire:model="password" class="form-control" id="password"
-                                placeholder="Enter Password" required />
+                                placeholder="Enter Password"  />
 
                             @error('password')
                                 <p class="text-danger">{{ $message }} </p>
                             @enderror
                         </div>
                         <div class="form-group mb-2">
-                            <label for="password_confirmation">Confirm Password <span class="text-danger">*</span></label>
+                            <label for="password_confirmation">Confirm Password <span class="text-danger">{{$user ? '' : '*' }}</span></label>
                             <input type="text" wire:model="password_confirmation" class="form-control" id="password_confirmation"
-                                placeholder="Enter confirm password" required />
+                                placeholder="Enter confirm password"  />
 
                             @error('password_confirmation')
                                 <p class="text-danger">{{ $message }} </p>

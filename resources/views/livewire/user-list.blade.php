@@ -78,8 +78,8 @@
                                 </span>
                             </th>
                             <th>Date
-                                <span wire:click="sortBy('date')">
-                                    @if ($sortColumn === 'date')
+                                <span wire:click="sortBy('created_at')">
+                                    @if ($sortColumn === 'created_at')
                                         @if ($sortOrder === 'asc')
                                             <i class="fa-solid fa-sort-up"></i>
                                         @else
@@ -91,17 +91,7 @@
                                 </span>
                             </th>
                             <th>Actions
-                                <span wire:click="sortBy('action')">
-                                    @if ($sortColumn === 'action')
-                                        @if ($sortOrder === 'asc')
-                                            <i class="fa-solid fa-sort-up"></i>
-                                        @else
-                                            <i class="fa-solid fa-sort-down"></i>
-                                        @endif
-                                    @else
-                                        <i class="fa-solid fa-sort"></i>
-                                    @endif
-                                </span>
+
                             </th>
                         </tr>
                     </thead>
